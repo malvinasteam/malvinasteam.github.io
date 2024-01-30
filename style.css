@@ -1,5 +1,5 @@
 #contenedor video{
-	/*max-width: 100%;*/
+	max-width: 100%;
 	width: 100%;
 }
 #contenedor{
@@ -13,4 +13,9 @@ canvas.drawingBuffer{
 	position:absolute;
 	top:0;
 	left:0;
+}
+.barra {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }

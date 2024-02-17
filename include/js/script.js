@@ -122,7 +122,7 @@ async function searchEngine (param) {
     const url = "https://malvinas-team.000webhostapp.com/apiSearch.php?q="+ param;
 	var opts = {
 		method: "GET", // *GET, POST, PUT, DELETE, etc.
-		mode: "same-origin", // no-cors, *cors, same-origin
+		mode: "no-cors", // no-cors, *cors, same-origin
 		cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
 		credentials: "same-origin", // include, *same-origin, omit
 	}

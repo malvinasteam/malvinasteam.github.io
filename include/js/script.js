@@ -121,9 +121,10 @@ inputSearch[0].addEventListener("keypress", function(event){
 async function searchEngine (param) {
     const url = "https://malvinas-team.000webhostapp.com/apiSearch.php?q="+ param;
 	var opts = {
-		headers: {
-		  'mode':'no-cors'
-		}
+		method: "GET", // *GET, POST, PUT, DELETE, etc.
+		mode: "same-origin", // no-cors, *cors, same-origin
+		cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+		credentials: "same-origin", // include, *same-origin, omit
 	}
     const response = await fetch(url,opts);
 	const resultado = await response.text();

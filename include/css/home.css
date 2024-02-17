@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/*****************************/
+.icon-down-menu button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+.icon-down-menu button:hover {
+  color: #908E9B;
+}
+.icon-down-menu .icon-down-menu-actived {
+  position: relative;
+  color: #908E9B;
+}
+.icon-down-menu .icon-down-menu-actived::after {
+  background-color: #908E9B;
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 4px;
+}
+
+/*****************************/
+.product-item {
+  padding: 0.25rem;
+}
+.product-item .up-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.product-item .up-info .product-img {
+  height: 6rem;
+  width: 6rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+.product-item .up-info .product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-item .up-info .product-info {
+  width: calc(100% - 6.5rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+}
+.product-item .up-info .product-info .product-name {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*white-space: nowrap;*/
+}
+.product-item .up-info .product-info .ean {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+.product-item .down-info {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+/*****************************/
+.card-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #565360;
+}
+.card-icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: whitesmoke;
+  font-size: 0.75rem;
+}
+
+/*****************************/
+.seller-item-search {
+  width: 8rem;
+  height: 8rem;
+  padding-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.75rem;
+  background-color: #E1DFE9;
+}
+.seller-item-search .seller-img {
+  border-radius: 0.75rem;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  overflow: hidden;
+  color: whitesmoke;
+  background-color: white;
+}
+.seller-item-search .seller-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.seller-item-search .seller-img:hover .card-icon {
+  opacity: 0.8;
+}
+.seller-item-search .seller-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seller-item-search .seller-info .seller-price {
+  padding-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #565360;
+}
+
+/**************************************/
+.search-container {
+  width: 100%;
+  min-height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #908E9B;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.search-container input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: none;
+}
+.search-container input:enabled {
+  outline: none;
+}
+.search-container button {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0.25rem;
+  background-color: white;
+  margin-left: 0.5rem;
+  border: none;
+}
+.search-container button:hover {
+  background-color: #E1DFE9;
+}
+
+/*************************************/
+.scan-result {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  padding: 0.5rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.scan-result .back-scan {
+  border: none;
+  background-color: transparent;
+  color: whitesmoke;
+}
+.scan-result .back-scan:hover {
+  color: #908E9B;
+}
+.scan-result .scan-result-info {
+  display: flex;
+  flex-direction: column;
+}
+.scan-result .scan-result-info .scan-result-info-up {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.scan-result .scan-result-info .scan-result-info-up img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scan-result .scan-result-info .scan-result-info-down {
+  display: block;
+  padding-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: whitesmoke;
+}
+.scan-result .scan-result-info .scan-result-info-down .ean {
+  font-size: 0.75rem;
+}
+.scan-result .scan-result-list {
+  width: 100%;
+  height: 100%;
+  padding: 0.25rem;
+  overflow: auto;
+}
+
+.item-scan-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.item-scan-result .scan-result-seller {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.item-scan-result .scan-result-seller img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-scan-result .scan-result-price {
+  display: flex;
+  flex-direction: column;
+}
+.item-scan-result .scan-result-price .price {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: whitesmoke;
+}
+.item-scan-result .scan-result-price .update {
+  font-size: 0.75rem;
+  font-weight: 200;
+  color: whitesmoke;
+}
+.item-scan-result button {
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  color: whitesmoke;
+  background-color: #908E9B;
+  border-radius: 0.25rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+.all-novisible {
+  display: none !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  max-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #4B79A1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #283E51, #4B79A1); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*************************/
+/*** MENU ABAJO MOVILE ***/
+/*************************/
+.down-menu {
+  width: 100%;
+  height: 3.5rem;
+  position: fixed; /*El div será ubicado con relación a la pantalla*/
+  left: 0px; /*A la derecha deje un espacio de 0px*/
+  right: 0px; /*A la izquierda deje un espacio de 0px*/
+  bottom: 0px; /*Abajo deje un espacio de 0px*/
+  z-index: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*************************/
+/****** MENU ARRIBA ******/
+/*************************/
+.up-Nav {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+
+.home, .search, .scan, .menu {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  padding: 0.5rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: fadeIn 600ms ease;
+}
+
+.search-result {
+  width: 100%;
+  height: calc(100vh - 11rem);
+  padding: 0.5rem;
+  overflow: auto;
+  display: block;
+}
+
+/*# sourceMappingURL=home.css.map */

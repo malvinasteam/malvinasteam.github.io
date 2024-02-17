@@ -14,8 +14,7 @@ canvas.drawingBuffer{
 	top:0;
 	left:0;
 }
-.barra {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+#resultado {
+	color: whitesmoke;
+	font-weight: 300;
 }

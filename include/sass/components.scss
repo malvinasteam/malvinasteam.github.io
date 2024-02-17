@@ -1,0 +1,343 @@
+$color-text: #565360;
+$color-label: #908E9B;
+$color-text-h: #E1DFE9;
+
+@mixin centrar-icono {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@mixin card {
+    border-radius: 0.75rem;
+    width: 4rem;
+    height: 4rem;
+
+    position: relative;
+	overflow: hidden;
+
+    color:whitesmoke;
+}
+
+@mixin text-hiden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+
+/*****************************/
+.icon-down-menu {
+
+    button {
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        color: whitesmoke;
+        
+        &:hover {
+            color: $color-label;
+        }
+
+    }
+
+    .icon-down-menu-actived {
+        position: relative;
+        color: $color-label;
+    }
+
+    .icon-down-menu-actived::after {
+        background-color: $color-label;
+        border-radius: 50%;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 4px;
+        left: 50%;
+        position: absolute;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 4px;
+        
+    }
+}
+
+/*****************************/
+.product-item {
+    padding: 0.25rem;
+
+    .up-info{
+        //width: calc(100% - 2rem);
+        width: 100%; 
+        display: flex;
+        align-items: center;
+
+        .product-img {
+            height: 6rem;
+            width: 6rem;
+            margin-right: 0.5rem;
+            border-radius: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .product-info {
+            width: calc(100% - 6.5rem);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: whitesmoke;
+
+            .product-name {
+                margin: 0;
+                font-weight: 300;
+                font-size: 1.25rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                /*white-space: nowrap;*/
+            }
+
+            .ean {
+                font-size: 0.75rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .down-info {
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+    
+}
+
+/*****************************/
+.card-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.75rem;
+    
+    opacity: 0;
+    transition: .3s ease;
+    background-color: $color-text;
+
+    span {
+        @include centrar-icono();
+
+        text-align: center;
+        color: whitesmoke;
+        font-size: 0.75rem;
+    }
+
+}
+
+/*****************************/
+.seller-item-search {
+    width: 8rem;
+    height: 8rem;
+    padding-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 0.75rem;
+    background-color: $color-text-h;
+
+    .seller-img {
+        border-radius: 0.75rem;
+        width: 4rem;
+        height: 4rem;
+
+        position: relative;
+        overflow: hidden;
+
+        color:whitesmoke;
+        background-color: white;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:hover .card-icon {
+            opacity: 0.8;
+        }
+    }
+
+    .seller-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .seller-price{
+            padding-top: 0.25rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $color-text;
+        }
+    }
+    
+}
+
+
+/**************************************/
+.search-container {
+    width: 100%;
+    min-height: 2.5rem;
+    border-radius: 0.5rem; 
+    border: 1px solid $color-label;
+    background-color: white;
+    
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    input {
+        width: 100%;
+        padding: 0.25rem 0.5rem;
+
+        border: none;
+        
+        &:enabled {
+            outline:none; 
+           }
+    }
+
+    button {
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+        padding: 0.25rem;
+        background-color: white;
+        margin-left: 0.5rem;
+        border: none;
+                
+        &:hover {
+           background-color: $color-text-h;
+        }
+    }
+}
+
+
+/*************************************/
+.scan-result {
+    width: 100%;
+    height: calc(100vh - 7rem);
+    padding: 0.5rem;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .back-scan {
+        border: none;
+        background-color: transparent;
+        color: whitesmoke;
+
+        &:hover {
+            color: $color-label;
+        }
+    }
+
+    .scan-result-info {
+        display: flex;
+        flex-direction: column;
+
+        .scan-result-info-up {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 0.75rem;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .scan-result-info-down {
+            display: block;
+            padding-top: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: whitesmoke;
+
+            .ean {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .scan-result-list {
+        width: 100%;
+        height: 100%;
+        padding: 0.25rem;
+        overflow: auto;
+
+    }
+}
+
+.item-scan-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    .scan-result-seller {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 0.25rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .scan-result-price {
+        display: flex;
+        flex-direction: column;
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: whitesmoke;
+        }
+
+        .update {
+            font-size: 0.75rem;
+            font-weight: 200;
+            color: whitesmoke;
+        }
+    }
+
+    button {
+        width: 5rem;
+        height: 2rem;
+        border: none;
+        color: whitesmoke;
+        background-color: $color-label;
+        border-radius: 0.25rem;
+    }
+}

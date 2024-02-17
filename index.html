@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,44 +7,438 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="include/css/style.css">
+    <link rel="stylesheet" href="include/css/home.css">
     <title>MirandoPrecios</title>
 </head>
 <body>
-    <nav class="barra">
-        <div>LOGO</div>
-        <div>INPUT</div>
-        <div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#webscan">
-                <i class="bi bi-camera"></i>
-            </button>
-            
-        </div>
+    <nav class="up-Nav">
+        <h1 class="display-6">MirandoPrecios</h1>
     </nav>
 
-    <!-- Modal -->
-    <div class="modal fade" id="webscan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Scanea el producto</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                
-		        <div id="contenedor"></div>
-                <p id="resultado">Ean:</p>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">OK</button>
-            </div>
-          </div>
+    <section class="home"><h3>Home</h3></section>
+    <section class="search all-novisible">
+        <div class="search-container">
+            <input class="inputSearch" type="text" placeholder="Buscar...">
+            <button class="btnSearchInput"><i class="bi bi-search"></i></button>
         </div>
-      </div>
+        <div class="search-result">
+        <!--
+            <div class="product-item">
+                <div class="up-info">
+                    <div class="product-img">
+                        <img src="https://jumboargentina.vteximg.com.br/arquivos/ids/797319/Leche-Uat-Desc-La-Serenisima-0-Bot-1l-1-845971.jpg?v=638332509841900000" alt="LOGO SUPER">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Leche Ultra Descremada 0% La Serenisima 1 Lt</span>
+                        <span class="ean">7790895002991</span>
+                    </div>
+                </div>
+        
+                <div class="down-info">
+        
+                    <div id="prod1" class="splide" role="group" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller2.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+        
+                                </li>
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_carrefour.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+        
+                                </li>
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_coto.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_disco.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_vea.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_changomas.png" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_market.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_express.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+
+            
+            <div class="product-item">
+                <div class="up-info">
+                    <div class="product-img">
+                        <img src="https://ardiaprod.vteximg.com.br/arquivos/ids/273350/Leche-La-Serenisima-Multivitaminas-1--1-Lt-_1.jpg?v=638322551024900000" alt="LOGO PRODUCTO">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-name">Leche La Serenisima Multivitaminas 1% 1 Lt.</span>
+                        <span class="ean">7790742348005</span>
+                    </div>
+                </div>
+        
+                <div class="down-info">
+                    
+                    <div id="prod2" class="splide" role="group" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller2.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+        
+                                </li>
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_carrefour.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+        
+                                </li>
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_coto.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_disco.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_vea.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_changomas.png" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_market.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+        
+                                <li class="splide__slide">
+                                    
+                                    <div class="seller-item-search">   
+                        
+                                        <div class="seller-img">
+                                            <div class="card-icon">
+                                                <span class="icon-card-info"></span>
+                                            </div>
+                                            <img src="include/img/seller_express.jpg" alt="Imagen">
+                                        </div>
+                                        
+                                        <div class="seller-info">
+                                            <span class="seller-price">$1000.00</span>
+                                            <span class="seller-graph"><i class="bi bi-graph-up"></i></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                            
+                </div>
+            </div>
+        -->
+
+        </div>
+    </section>
+    <section class="scan all-novisible">
+        
+        <div id="contenedor"></div>
+        <p id="resultado">Codigo de barra :</p>
     
+    </section>
+    <section class="menu all-novisible"><h3>Menu</h3></section>
+    
+    <section class="down-menu">
+        <span class="icon-down-menu"><button class="btnHome icon-down-menu-actived"><i class="bi bi-house"></i></button></span>
+        <span class="icon-down-menu"><button class="btnSearch"><i class="bi bi-search"></i></button></span>
+        <span class="icon-down-menu"><button class="btnScan"><i class="bi bi-upc-scan"></button></i></span>
+        <span class="icon-down-menu"><button class="btnMenu"><i class="bi bi-list"></button></i></span>
+    </section>
 </body>
     <script src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
-    <script src="script.js"></script>
+    <script src="include/js/script.js"></script>
+    <!--
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            var splide = new Splide( '#prod1', {
+                rewind      :   true,
+                rewindByDrag:   true,
+                arrows      :   false,
+                fixedWidth  :   '9rem',
+                fixedHeight :   '9rem',
+                rewind      :   true,
+                rewindByDrag:   true,
+                gap : '0.5rem',
+                padding: '0.25rem',
+                } );
+            splide.mount();
+
+            var prueba = new Splide( '#prod2', {
+                rewind      :   true,
+                rewindByDrag:   true,
+                arrows      :   false,
+                fixedWidth  :   '9rem',
+                fixedHeight :   '9rem',
+                rewind      :   true,
+                rewindByDrag:   true,
+                gap : '0.5rem'
+                } );
+            prueba.mount();
+        } );
+    </script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
 </html>

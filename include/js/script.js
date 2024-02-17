@@ -20,25 +20,28 @@ btnHome[0].addEventListener("click", function() {
         
     displyaHandlerSection(1);
     lastSeccion = 1;
+    stopScan();
 });
 
 btnSearch[0].addEventListener("click", function() {
         
     displyaHandlerSection(2);
     lastSeccion = 2;
+    stopScan();
 });
 
 btnScan[0].addEventListener("click", function() {
         
     displyaHandlerSection(3);
     lastSeccion = 3;
-	Scan();
+    Scan();
 });
 
 btnMenu[0].addEventListener("click", function() {
         
     displyaHandlerSection(4);
     lastSeccion = 4;
+    stopScan();
 });
 
 const displyaHandlerSection = (section) => {
@@ -115,29 +118,34 @@ inputSearch[0].addEventListener("keypress", function(event){
 
 //TODO VER LO DE ASYNC ACA Y HACER EL SPINNER DE BUSQUEDA
 
-const searchEngine = (param) => {
-    const url = "https://malvinas-team.000webhostapp.com/apiSearch.php?q="+ param;
-   
-    fetch(url)
-    .then(response => {
-        return response.text();
-      })
-    .then(resultado => {
-        searchResultado[0].innerHTML = resultado;
-		//TODO ESTO DEBERIA SER UNA FUNCION
-		var splide = new Splide( '#prod1', {
-			rewind      :   true,
-			rewindByDrag:   true,
-			arrows      :   false,
-			fixedWidth  :   '9rem',
-			fixedHeight :   '9rem',
-			rewind      :   true,
-			rewindByDrag:   true,
-			gap : '0.5rem',
-			padding: '0.25rem',
-			} );
-		splide.mount();
-    });
+async function searchEngine (param) {
+    const url = "apiSearch.php?q="+ param;
+	var opts = {
+		headers: {
+		  'mode':'no-cors'
+		}
+	}
+    const response = await fetch(url,opts);
+	const resultado = await response.text();
+    searchResultado[0].innerHTML = resultado;
+	//TODO ESTO DEBERIA SER UNA FUNCION
+	var splide = new Splide( '#prod1', {
+		rewind      :   true,
+		rewindByDrag:   true,
+		arrows      :   false,
+		fixedWidth  :   '9rem',
+		fixedHeight :   '9rem',
+		rewind      :   true,
+		rewindByDrag:   true,
+		gap : '0.5rem',
+		padding: '0.25rem',
+		} );
+	splide.mount();
+    
+}
+
+const stopScan = () => {
+	Quagga.stop();
 }
 
 
